@@ -20,6 +20,8 @@ npx esbuild --watch --bundle main.tsx --outfile=index.js
 
 I modified EVI's [default prompt](https://github.com/HumeAI/hume-api-examples/blob/main/evi-prompt-examples/default_prompt.txt) to be appropriate for a questionnaire, and created two simple tools `next_question` and `record_answer`.
 
+You can read the prompt text by itself [here](prompt.txt).
+
 ```json
 {
   "id": "f699a5ec-49cc-4199-b7c3-59ac4f8ec3eb",
