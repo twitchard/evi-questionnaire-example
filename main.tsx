@@ -44,20 +44,15 @@ const Chat = () => {
   const [answers, setAnswers] = React.useState<any[]>([])
   useToolCallback(messages, (m) => {
     if (m.name === 'next_question') {
+      const json = JSON.parse(m.parameters)
+      if (json.answer) {
+        setAnswers([...answers, json.answer])
+        i++;
+      }
       sendToolMessage({
         type: 'tool_response',
         toolCallId: m.toolCallId,
         content: questions[i]
-      })
-      return
-    }
-    if (m.name === 'record_answer') {
-      setAnswers([...answers, m.parameters])
-      i++;
-      sendToolMessage({
-        type: 'tool_response',
-        toolCallId: m.toolCallId,
-        content: 'accepted'
       })
       return
     }

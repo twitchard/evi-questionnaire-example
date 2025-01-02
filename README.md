@@ -57,28 +57,15 @@ You can read the prompt text by itself [here](prompt.txt).
   "tools": [
     {
       "tool_type": "FUNCTION",
-      "id": "b08f310e-4859-4de4-be38-b6497a3d5429",
+      "id": "8460a3ee-c3dd-4a72-8a7f-e98a1cbb09ec",
       "version": 0,
       "version_type": "FIXED",
-      "version_description": "Gets the next question in the questionnaire.",
+      "version_description": "Records an answer to the previous question (if applicable) and retrieves the next question in the questionnaire to ask (if applicable)",
       "name": "next_question",
-      "created_on": 1735619103150,
-      "modified_on": 1735619103150,
+      "created_on": 1735838571612,
+      "modified_on": 1735838571612,
       "fallback_content": null,
-      "description": "Gets the next question in the questionnaire.",
-      "parameters": "{\n  \"type\": \"object\",\n  \"required\": [],\n  \"properties\": {}\n}"
-    },
-    {
-      "tool_type": "FUNCTION",
-      "id": "e8537155-d92e-4333-82d7-149e6797898f",
-      "version": 0,
-      "version_type": "FIXED",
-      "version_description": "Records a user's answer to a question.",
-      "name": "record_answer",
-      "created_on": 1735619333402,
-      "modified_on": 1735619333402,
-      "fallback_content": null,
-      "description": "Records a user's answer to a question.",
-      "parameters": "{\n  \"type\": \"object\",\n  \"required\": [\"value\"],\n  \"properties\": {\n    \"value\": {\n      \"type\": \"string\"\n    }\n  }\n}"
+      "description": "Records an answer to the previous question (if applicable) and retrieves the next question in the questionnaire to ask (if applicable)",
+      "parameters": "{\n  \"type\": \"object\",\n  \"required\": [],\n  \"properties\": {\"answer\": {\n    \"type\": \"string\"\n  }}\n}"
     }
   ],
